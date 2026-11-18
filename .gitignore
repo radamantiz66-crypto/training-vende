@@ -1,0 +1,13 @@
+# Prompt de trabajo (no se publica)
+PROMPT.md
+TRAINING-vende-tu-prenda-prompt.md
+
+# Sistema y editores
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+node_modules/
+*.log
+.claude/

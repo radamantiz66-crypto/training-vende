@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex">
+  <title>Ajustes · TRAINING vende tu prenda</title>
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="assets/logo-horizontal.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <img class="topbar__logo" src="assets/logo-horizontal.jpg" alt="Training Bazar" width="560" height="173">
+  </header>
+
+  <main class="contenedor">
+    <section class="tarjeta">
+      <div class="tarjeta__cabeza">
+        <h1 class="titulo">Ajustes</h1>
+        <p class="subtitulo">Editor visual de config.js</p>
+      </div>
+      <div class="tarjeta__cuerpo">
+        <p class="ajustes-nota">Esta página no guarda nada por sí sola. Copia el resultado y pégalo en config.js en GitHub (lápiz ✏️ → pegar → Commit changes). Cloudflare publica el cambio en 1 o 2 minutos.</p>
+
+        <form id="form-ajustes" novalidate>
+          <div class="ajustes-seccion">
+            <h2>General</h2>
+            <label class="interruptor"><input type="checkbox" id="a-activo"> Página activa (recibiendo prendas)</label>
+            <div class="campo"><label for="a-titulo">Título</label><input id="a-titulo" type="text"></div>
+            <div class="campo"><label for="a-subtitulo">Subtítulo</label><textarea id="a-subtitulo" rows="2"></textarea></div>
+            <div class="campo">
+              <label for="a-whatsapp">WhatsApp de la tienda</label>
+              <input id="a-whatsapp" type="tel" inputmode="numeric" aria-describedby="a-whatsapp-ayuda">
+              <p class="campo__ayuda" id="a-whatsapp-ayuda">Con 52 adelante, sin espacios. Ejemplo: 526442114830</p>
+            </div>
+            <div class="fila-2">
+              <div class="campo"><label for="a-comision">Comisión (%)</label><input id="a-comision" type="number" min="0" max="100" step="1" inputmode="numeric"></div>
+              <div class="campo"><label for="a-min">Mínimo de fotos</label><input id="a-min" type="number" min="1" max="10" step="1" inputmode="numeric"></div>
+            </div>
+            <div class="fila-2">
+              <div class="campo"><label for="a-max">Máximo de fotos</label><input id="a-max" type="number" min="1" max="10" step="1" inputmode="numeric"></div>
+              <div></div>
+            </div>
+            <div class="campo"><label for="a-catalogo">Enlace del catálogo</label><input id="a-catalogo" type="url"></div>
+          </div>
+
+          <div class="ajustes-seccion">
+            <h2>Reglas</h2>
+            <div class="campo">
+              <label for="a-reglas">Una regla por línea</label>
+              <textarea id="a-reglas" rows="9"></textarea>
+            </div>
+          </div>
+
+          <div class="ajustes-seccion">
+            <h2>Opciones de listas</h2>
+            <div class="campo"><label for="a-categorias">Categorías (una por línea)</label><textarea id="a-categorias" rows="5"></textarea></div>
+            <div class="campo"><label for="a-estados">Estados de la prenda (uno por línea)</label><textarea id="a-estados" rows="4"></textarea></div>
+          </div>
+
+          <div class="ajustes-seccion">
+            <h2>Campos del paso 2</h2>
+            <p class="campo__ayuda">Cambia el texto, oculta campos o márcalos como obligatorios. Usa ↑ y ↓ para cambiar el orden.</p>
+            <div id="a-campos"></div>
+          </div>
+
+          <div class="ajustes-seccion">
+            <button type="submit" class="boton boton--oscuro boton--bloque">Generar config.js</button>
+            <p id="a-error" class="alerta alerta--error" role="alert" hidden></p>
+          </div>
+        </form>
+
+        <div id="resultado" class="ajustes-seccion resultado" hidden>
+          <h2 id="resultado-titulo" tabindex="-1">Tu config.js</h2>
+          <label for="a-salida" class="solo-lector">Contenido de config.js</label>
+          <textarea id="a-salida" readonly spellcheck="false"></textarea>
+          <div class="acciones">
+            <button type="button" id="a-copiar" class="boton boton--oscuro">Copiar</button>
+            <button type="button" id="a-descargar" class="boton boton--secundario">Descargar config.js</button>
+          </div>
+          <p id="a-copiado" class="aceptado" role="status"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p>Training Bazar · SPORTWEAR · ADVENTURE</p>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+  <script src="ajustes.js"></script>
+</body>
+</html>
