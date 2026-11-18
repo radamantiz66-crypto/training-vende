@@ -35,7 +35,8 @@ window.TB_CONFIG = {
     "Training Bazar revisa tu prenda y decide si la publica en el catálogo.",
     "Training Bazar cobra al cliente y te paga el precio acordado menos su comisión cuando se concreta la venta.",
     "Si vendes la prenda por tu cuenta, avísanos de inmediato para quitarla del catálogo.",
-    "Si la prenda no se vende en 30 días, acordamos bajarle el precio o te la regresamos."
+    "Si la prenda no se vende en 30 días, acordamos bajarle el precio o te la regresamos.",
+    "En pedidos con envío gratis (desde $1,000), el costo del envío se reparte entre las prendas del pedido y tu parte se descuenta de tu pago. Ej.: envío por Correos de México de $70 con 4 prendas = $17.50 menos."
   ],
 
   // Opciones de la lista "Categoría".
